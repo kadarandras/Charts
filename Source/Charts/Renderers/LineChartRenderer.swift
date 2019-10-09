@@ -734,7 +734,16 @@ open class LineChartRenderer: LineRadarRenderer
                 }
                 else
                 {
+                    if dataSet.isDrawCircleShadowEnabled {
+                        context.setShadow(offset: dataSet.circleShadowOffset,
+                                          blur: dataSet.circleShadowBlur,
+                                          color: dataSet.circleShadowColor?.cgColor)
+                    }
+                    
                     context.fillEllipse(in: rect)
+                    
+                    // Reset shadow
+                    context.setShadow(offset: .init(width: 0, height: 0), blur: 0, color: nil)
                     
                     if drawCircleHole
                     {

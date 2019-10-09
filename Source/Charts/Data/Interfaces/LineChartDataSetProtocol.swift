@@ -61,6 +61,21 @@ public protocol LineChartDataSetProtocol: LineRadarChartDataSetProtocol
     /// - returns: `true` if drawing circles for this DataSet is enabled, `false` ifnot
     var isDrawCirclesEnabled: Bool { get }
     
+    /// The shadow offset
+    var circleShadowOffset: CGSize { get set }
+    
+    /// The shadow blur
+    var circleShadowBlur: CGFloat { get set }
+    
+    /// The shadow color
+    var circleShadowColor: UIColor? { get set }
+    
+    /// If ture, drawing circle shadows is enabled
+    var drawCircleShadowEnabled: Bool { get set }
+    
+    /// - returns: `true` if drawing circle shadows for this DataSet is enabled, `false` ifnot
+    var isDrawCircleShadowEnabled: Bool { get }
+    
     /// The color of the inner circle (the circle-hole).
     var circleHoleColor: NSUIColor? { get set }
     
